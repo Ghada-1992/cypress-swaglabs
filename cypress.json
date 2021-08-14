@@ -1,4 +1,8 @@
 {
     "baseUrl": "https://www.saucedemo.com/",
-    "chromeWebSecurity": false
+    "chromeWebSecurity": false,
+    "reporter": "cypress-multi-reporters",
+    "reporterOptions": {
+        "configFile": "reporter-config.json"
+    }
 }

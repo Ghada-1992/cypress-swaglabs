@@ -4,8 +4,13 @@
   "description": "Cypress E2E Testing Framework",
   "main": "index.js",
   "scripts": {
-    "open": "cypress open",
-    "test": "cypress run"
+    "cypress": "./node_modules/.bin/cypress open",
+    "delete:reports": "rm -f cypress/results/report/* || true",
+    "prereport": "npm run delete:reports",
+    "mocha": "./node_modules/.bin/cypress run --reporter cypress-multi-reporters --reporter-options configFile=reporter-config.json",
+    "merge": "./node_modules/.bin/mochawesome-merge --reportDir cypress/results/mocha > cypress/results/report/mochawesome.json",
+    "generate": "npx mochawesome-report-generator --reportDir cypress/results/report --cdn true --charts true cypress/results/report/mochawesome.json",
+    "test": "npm run delete:reports & npm run mocha && npm run merge && npm run generate"
   },
   "repository": {
     "type": "git",
@@ -14,6 +19,12 @@
   "author": "Ghada Ayari",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^8.0.0"
+    "cypress": "^8.0.0",
+    "cypress-multi-reporters": "^1.2.1",
+    "mocha": "5.2.0",
+    "mocha-junit-reporters": "^1.23.6",
+    "mochawesome": "^4.1.0",
+    "mochawesome-merge": "^2.0.1",
+    "mochawesome-report-generator": "^4.0.1"
   }
 }
