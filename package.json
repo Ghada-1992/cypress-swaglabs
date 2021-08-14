@@ -1,0 +1,19 @@
+{
+  "name": "cypress-swaglabs",
+  "version": "1.0.0",
+  "description": "Cypress E2E Testing Framework",
+  "main": "index.js",
+  "scripts": {
+    "open": "cypress open",
+    "test": "cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ghada-1992/cypress-swaglabs.git"
+  },
+  "author": "Ghada Ayari",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^8.0.0"
+  }
+}
