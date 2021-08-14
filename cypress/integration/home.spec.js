@@ -16,7 +16,7 @@
      loginPage.signIn(data.username, data.password);
    });
 
-   it.only("Verify User can successfully logout from the application", () => {
+   it("Verify User can successfully logout from the application", () => {
      homePage.getMenuButton().should("be.visible");
      homePage.clickMenuButton();
      for (let val in data.menuItems) {
@@ -33,7 +33,7 @@
      loginPage.getLoginButton().should("be.visible");
    });
 
-   it.only('Verify that the application redirects to the "About" page', () => {
+   it('Verify that the application redirects to the "About" page', () => {
      homePage.getMenuButton().should("be.visible");
      homePage.clickMenuButton();
      for (let val in data.menuItems) {
