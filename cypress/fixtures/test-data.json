@@ -1,0 +1,13 @@
+{
+    "username": "standard_user",
+    "lockedOutUsername": "locked_out_user",
+    "password": "secret_sauce",
+    "inventoryPagePath" : "inventory.html",
+    "aboutRedirectionUrl": "https://saucelabs.com/",
+    "menuItems": [
+        "All Items",
+        "About",
+        "Logout",
+        "Reset App State"
+    ]
+  }
