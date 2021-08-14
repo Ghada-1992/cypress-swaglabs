@@ -1,0 +1,44 @@
+# ########################################
+#   Language, tools, os global settings
+# ########################################
+
+# ################# Node
+lib-cov
+*.seed
+*.log
+*.dat
+*.out
+*.pid
+*.gz
+
+pids
+logs
+results
+
+npm-debug.log
+node_modules
+node
+
+# ################ Unix
+*.swp
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+
+# ################ OSX
+.DS_Store
+
+
+# ################ IntelliJ & VS Code local specific files
+
+# Ignore all Intellij/VS Code dirs
+# Files can be added manually with `git add --force` or by adding a corresponding '!...' line here
+.idea/
+*.iml
+.vscode
+
+# ################ cypress
+cypress/videos
+cypress/screenshots
