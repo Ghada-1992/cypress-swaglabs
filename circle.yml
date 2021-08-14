@@ -1,0 +1,21 @@
+version: 2.1
+orbs:
+  cypress: cypress-io/cypress@1
+workflows:
+  build:
+    jobs:
+      - cypress/install
+      - cypress/run:
+          requires:
+            - cypress/install
+          command: 'npm test'
+          parallel: true      # split all specs across machines
+          post-steps:
+            - store_test_results:
+                path: cypress/results/junit
+            - store_artifacts:
+                path: cypress/results/report
+general:
+  branches:
+    only:
+      - master
