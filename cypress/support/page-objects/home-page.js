@@ -6,6 +6,7 @@ export class HomePage {
   inventoryList = ".inventory_list";
   menuButton = "#react-burger-menu-btn";
   menuItems = ".menu-item";
+  menuItemsNames = ["All Items", "About", "Logout", "Reset App State"];
   logoutLink = "#logout_sidebar_link";
   aboutLink = "#about_sidebar_link";
 

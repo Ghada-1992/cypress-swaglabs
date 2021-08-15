@@ -19,12 +19,12 @@
    it("Verify User can successfully logout from the application", () => {
      homePage.getMenuButton().should("be.visible");
      homePage.clickMenuButton();
-     for (let val in data.menuItems) {
+     for (let val in homePage.menuItemsNames) {
        homePage
          .getMenuItems()
          .eq(val)
          .should("be.visible")
-         .and("have.text", data.menuItems[val]);
+         .and("have.text", homePage.menuItemsNames[val]);
      }
      homePage.clickLogoutLink();
      cy.url().should("eq", Cypress.config().baseUrl);
@@ -36,12 +36,12 @@
    it('Verify that the application redirects to the "About" page', () => {
      homePage.getMenuButton().should("be.visible");
      homePage.clickMenuButton();
-     for (let val in data.menuItems) {
+     for (let val in homePage.menuItemsNames) {
        homePage
          .getMenuItems()
          .eq(val)
          .should("be.visible")
-         .and("have.text", data.menuItems[val]);
+         .and("have.text", homePage.menuItemsNames[val]);
      }
      homePage.clickAboutLink();
      cy.url().should("eq", data.aboutRedirectionUrl);
